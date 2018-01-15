@@ -10,3 +10,15 @@ var url = 'http://www.domain.com/?user=anonymous&id=123&id=456&city=%E5%8C%97%E4
     enabled: true, // 未指定值的 key 约定值为 true
  }
  */
+ function parseToMoney(url) {
+      var urlArr=url.split('?');
+      var urlPre= urlArr[0];
+      var urlAft = urlArr[1];
+      var key= urlAft.split('&');
+      var u={};
+      for(var i=0;i<key.length;i++) {
+          var urls=key[i].split('=');
+          var f=urls[0];
+          u[f]=urls[1];
+      }
+  }

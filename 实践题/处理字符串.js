@@ -18,12 +18,13 @@ foo099 -> foo100
 */
 
 function str(val) {
-    var pre=val.substring(0,val.length - 1);
-    var last=val.substring(val.length-1);
-    var type=typeof last;
+    var re1=/(^\w*?)([1-9]*$)/;
+    var relArr= re1.exec(val);
+    var pre= re1.exec(val)[1];
+    var last=re1.exec(val)[2];
     if (last != null) {
         var r, re;
-        re = /\d/; //\d表示数字
+        re = /\d*/; //\d表示数字
         r = last.match(re);
         if(r==last)
         {

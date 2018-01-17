@@ -16,3 +16,23 @@ foo099 -> foo100
 
 注意：如果字符串中的数字以0开头，0需要被保留
 */
+
+function str(val) {
+    var pre=val.substring(0,val.length - 1);
+    var last=val.substring(val.length-1);
+    var type=typeof last;
+    if (last != null) {
+        var r, re;
+        re = /\d/; //\d表示数字
+        r = last.match(re);
+        if(r==last)
+        {
+            last++;
+        }
+        else{
+            last = last + '1'
+        }
+    }
+    var value=pre+last; 
+    return value;         
+}

@@ -23,16 +23,9 @@ function str(val) {
     var pre= re1.exec(val)[1];
     var last=re1.exec(val)[2];
     if (last != null) {
-        var r, re;
-        re = /\d*/; //\d表示数字
-        r = last.match(re);
-        if(r==last)
-        {
-            last++;
-        }
-        else{
-            last = last + '1'
-        }
+        last++;
+    } else{
+        last = last + '1'
     }
     var value=pre+last; 
     return value;         

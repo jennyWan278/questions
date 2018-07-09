@@ -15,7 +15,7 @@ function rgb(x,y,z) {
 
     for (var i = 0; i < 3; i++) {
         // 'Number.toString(16)' 是JS默认能实现转换成16进制数的方法.
-        // 如果结果是一位数，就在前面补零。例如： A变成0A, 如果有两位数，
+        // 如果结果是一位数，就在前面补零。例如： A变成0A, 如果有两位数，就截取后两位
         hex += ("0" + color[i].toString(16)).slice(-2);
     }
     return hex;
